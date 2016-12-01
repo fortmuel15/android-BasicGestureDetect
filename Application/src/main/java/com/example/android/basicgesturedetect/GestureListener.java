@@ -20,6 +20,7 @@ import android.annotation.TargetApi;
 import android.os.Build;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
+import scala.util.control.Breaks._
 
 import com.example.android.common.logger.Log;
 
@@ -101,7 +102,7 @@ public class GestureListener extends GestureDetector.SimpleOnGestureListener {
      * Returns a human-readable string describing the type of touch that triggered a MotionEvent.
      */
 
-    private static String getTouchType(MotionEvent e){
+    public static String getTouchType(MotionEvent e){
 
         String touchTypeDescription = " ";
         int touchType = e.getToolType(0);
